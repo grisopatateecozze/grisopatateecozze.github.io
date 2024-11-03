@@ -1,0 +1,125 @@
+/* Stili generali */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #007bff; /* Colore blu per lo sfondo di tutta la pagina */
+  margin: 0;
+}
+
+/* Schermate */
+.screen {
+  display: none;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: transparent; /* Rende il background della schermata trasparente */
+  color: white;
+  border-radius: 10px;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Titolo */
+h1 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 90px;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+h3 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* Campi di input */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 95%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Pulsanti */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #003d80;
+}
+
+button:last-child {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+button:last-child:hover {
+  background-color: #e2e6ea;
+}
+
+/* Stile per la sezione Mercato */
+#Mercato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Stile per l'iframe */
+#Mercato iframe {
+  width: 100%; /* Larghezza responsiva */
+  max-width: 1000px; /* Limita la larghezza massima */
+  height: 70vh; /* Altezza dinamica in base alla viewport */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Effetto ombra per un look moderno */
+  margin-top: 20px;
+}
+
+/* Stile del bottone "Torna al menu" */
+#Mercato button {
+  width: auto; /* Non occupa l'intera larghezza */
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Mercato button:hover {
+  background-color: #003d80;
+}
