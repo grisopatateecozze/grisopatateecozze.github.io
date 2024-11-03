@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcolatore BTP</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- Collega il file CSS esterno -->
+</head>
+<body>
+
+<!-- Schermata 1: Pagina Iniziale -->
+<section class="screen active" id="home">
+  <h1>Buoni del Tesoro Poliennali</h1>
+  <p>Calcolatore di valore e rendimento</p>
+  <button onclick="goToScreen('menu')">Iniziamo</button>
+</section>
+
+<!-- Schermata 2: Menù -->
+<section class="screen" id="menu">
+  <h1>Cosa vuoi fare?</h1>
+  <button onclick="goToScreen('FaseAcquisto')">Calcola prezzo d'Acquisto</button>
+  <button onclick="goToScreen('FaseVendita')">Calcola guadagno di Vendita</button>
+</section>
+
+<!-- Schermata 3: FaseAcquisto -->
+<section class="screen" id="FaseAcquisto">
+  <h2>Fase d'Acquisto</h2>
+  <label for="valoreNominale">Valore nominale comprato</label>
+  <input type="number" id="valoreNominale" placeholder="Inserisci il valore nominale">
+
+  <label for="prezzoVA">Prezzo/valore attuale di mercato</label>
+  <input type="number" id="prezzoVA" placeholder="Inserisci il prezzo di mercato">
+
+  <label for="rateoLordo">Rateo Lordo</label>
+  <input type="number" id="rateoLordo" placeholder="Inserisci il rateo lordo">
+
+  <button onclick="mostraPrezzoAcquisto()">Calcola costo d'acquisto</button>
+  <button onclick="goToScreen('menu')">Torna al menu</button>
+  <div id="risultatoAcquisto"></div>
+</section>
+
+<!-- Schermata 4: Fase Vendita -->
+<section class="screen" id="FaseVendita">
+  <h2>Fase Vendita Titolo</h2>
+  <label for="prezzoAcquisto">Prezzo d'Acquisto</label>
+  <input type="number" id="prezzoAcquisto" placeholder="Inserisci il prezzo d'acquisto">
+
+  <label for="valoreNominale1">Valore nominale comprato</label>
+  <input type="number" id="valoreNominale1" placeholder="Inserisci il valore nominale">
+
+  <label for="prezzoVA1">Prezzo/valore attuale di mercato</label>
+  <input type="number" id="prezzoVA1" placeholder="Inserisci il prezzo di mercato">
+
+  <label for="rateoLordo1">Rateo Lordo</label>
+  <input type="number" id="rateoLordo1" placeholder="Inserisci il rateo lordo">
+
+  <button onclick="mostraGuadagno()">Calcola guadagno di vendita</button>
+  <button onclick="goToScreen('menu')">Torna al menu</button>
+  <div id="risultatoGuadagno"></div>
+</section>
+
+<!-- Schermata 5: Mercato -->
+<section class="screen" id="Mercato">
+  <h3>Andamento mercato BTP</h3>
+  <iframe src="https://tradingeconomics.com/italy/government-bond-yield" title="Andamento dei BTP"></iframe>
+  <span>Powered by tradingeconomics.com</span>
+</section>
+
+<script src="src/app.js"></script>
+</body>
+</html>
