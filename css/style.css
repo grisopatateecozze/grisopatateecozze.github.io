@@ -123,33 +123,3 @@ button:last-child:hover {
 #Mercato button:hover {
   background-color: #003d80;
 }
-
-/* Stili generali per desktop */
-body {
-  font-size: 18px;
-}
-
-/* Stili specifici per schermi di larghezza massima 768px, adatti per tablet o smartphone */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .navbar {
-    flex-direction: column;
-  }
-  .content {
-    padding: 10px;
-  }
-}
-
-.container {
-  display: flex;
-  flex-direction: row; /* Per schermi grandi */
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Per schermi piccoli */
-  }
-}
-
