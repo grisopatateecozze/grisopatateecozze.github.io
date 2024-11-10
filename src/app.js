@@ -23,11 +23,10 @@ function calcolaPrezzoAcquisto(valoreNominale, prezzoVA, rateoLordo) {
   const controvalore = valoreNominale * prezzoVA;
   const controvaloreInteressi = valoreNominale * rateoLordo;
   const impostaSostitutivaRateo = controvaloreInteressi * 0.125;
-  const rateoScartoEmissione = 2.60;
   const speseBancarie = 2.70;
   const commissioniVendita = calcoloCommissioni(controvalore);
 
-  const prezzoAcquisto = controvalore + controvaloreInteressi + commissioniVendita + speseBancarie - impostaSostitutivaRateo - rateoScartoEmissione;
+  const prezzoAcquisto = controvalore + controvaloreInteressi + commissioniVendita + speseBancarie - impostaSostitutivaRateo;
 
   return {
     "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`
@@ -38,11 +37,10 @@ function calcolaGuadagno(prezzoAcquisto, valoreNominale1, prezzoVA1, rateoLordo1
   const controvalore = valoreNominale1 * prezzoVA1;
   const controvaloreInteressi = valoreNominale1 * rateoLordo1;
   const impostaSostitutivaRateo = controvaloreInteressi * 0.125;
-  const rateoScartoEmissione = 2.60;
   const speseBancarie = 2.70;
   const commissioniVendita = calcoloCommissioni(controvalore);
 
-  const guadagnoLordo = controvalore + controvaloreInteressi - speseBancarie - rateoScartoEmissione - impostaSostitutivaRateo - commissioniVendita - prezzoAcquisto;
+  const guadagnoLordo = controvalore + controvaloreInteressi - speseBancarie - impostaSostitutivaRateo - commissioniVendita - prezzoAcquisto;
 
   return {
     "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`,
@@ -50,7 +48,6 @@ function calcolaGuadagno(prezzoAcquisto, valoreNominale1, prezzoVA1, rateoLordo1
     "Controvalore in euro degli interessi": `${controvaloreInteressi.toFixed(2)}€`,
     "Imposta sostitutiva rateo interessi": `${(-impostaSostitutivaRateo).toFixed(2)}€`,
     "Commissione (0,10% sul controvalore)": `${(-commissioniVendita).toFixed(2)}€`,
-    "Rateo scarto emissione": `${(-rateoScartoEmissione).toFixed(2)}€`,
     "Spese bancarie": `${(-speseBancarie).toFixed(2)}€`,
     "Guadagno lordo": `${guadagnoLordo.toFixed(2)}€`
   };
