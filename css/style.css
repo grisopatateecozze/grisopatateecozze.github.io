@@ -123,3 +123,40 @@ button:last-child:hover {
 #Mercato button:hover {
   background-color: #003d80;
 }
+
+/* Stile per la barra scorrevole */
+.scrolling-bar {
+  position: fixed; /* Fissa la barra in alto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000ff; /* Colore blu brillante */
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Carattere sans-serif */
+  font-size: 2em; /* Aumenta la dimensione del testo */
+  font-weight: bold; /* Testo audace */
+  text-align: center;
+  overflow: hidden;
+  z-index: 1000; /* Assicura che sia visibile sopra tutto */
+  white-space: nowrap;
+  border-top: 4px solid white; /* Linea di separazione sopra */
+  border-bottom: 4px solid white; /* Linea di separazione sotto */
+  padding: 10px 0; /* Spaziatura verticale */
+}
+
+.scrolling-bar span {
+  display: inline-block;
+  padding-left: 100%; /* Inizia fuori dallo schermo */
+  animation: scrollText 8s linear infinite; /* Scorre continuamente */
+}
+
+/* Definizione dell'animazione */
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
