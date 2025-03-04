@@ -59,15 +59,6 @@ body {
   color: #A100FF;
 }
 
-/* Alert Banner */
-.alert-banner {
-  background: linear-gradient(90deg, #A100FF, #71C5FF);
-  color: white;
-  text-align: center;
-  padding: 12px 0;
-  font-weight: bold;
-  width: 100%;
-}
 
 /* Main Content */
 .main-content {
@@ -79,22 +70,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-  margin: 20px 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.breadcrumbs a {
-  color: #A100FF;
-  text-decoration: none;
-}
-
-.breadcrumbs a:hover {
-  text-decoration: underline;
 }
 
 /* Page Header */
@@ -303,28 +278,25 @@ input[type="number"]:focus {
   gap: 30px;
 }
 
-.footer-section h4 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
 .footer-section ul {
   list-style: none;
+  padding: 0;
+  display: flex; /* Per mettere gli elementi in riga */
+  gap: 15px; /* Distanza tra le icone */
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .footer-section ul li a {
-  color: #ccc;
+  font-size: 30px; /* Dimensione delle icone */
+  color: white; /* Colore delle icone */
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-  color: #A100FF;
+  color: #0073e6; /* Colore quando l'icona viene hoverata */
 }
 
 .copyright {
@@ -334,7 +306,7 @@ input[type="number"]:focus {
   border-top: 1px solid #444;
   text-align: center;
   color: #aaa;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 /* Mercato Page */
@@ -393,8 +365,7 @@ iframe {
   overflow: hidden;
   z-index: 1000; /* Assicura che sia visibile sopra tutto */
   white-space: nowrap;
-  border-top: 4px solid white; /* Linea di separazione sopra */
-  border-bottom: 4px solid white; /* Linea di separazione sotto */
+  border-bottom: 2px solid white; /* Linea di separazione sotto */
   padding: 10px 0; /* Spaziatura verticale */
 }
 
@@ -412,5 +383,42 @@ iframe {
   to {
     transform: translateX(-100%);
   }
+
+  
+}
+
+.page-intro {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 0;
+}
+
+#Mercato {
+  height: calc(100vh - 180px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.floating-button-down {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.floating-button-up {
+  position: fixed;
+  top: 30px; /* Sposta il bottone in alto */
+  right: 30px; /* Mantiene il bottone a destra */
+  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.floating-button .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
