@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andamento Mercato BTP | Accenture Italia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="https://via.placeholder.com/150x50" alt="Logo"></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Servizi</a></li>
+          <li><a href="#">Calcolatori</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="alert-banner">
+    <span>ATTENZIONE: I DATI DI MERCATO SONO FORNITI DA FONTI ESTERNE E POTREBBERO SUBIRE RITARDI</span>
+  </div>
+
+  <div class="page-intro">
+    <div class="content-container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; <span>Andamento Mercato BTP</span>
+      </div>
+      <h1>Andamento Mercato BTP</h1>
+      <p class="subtitle">Dati aggiornati in tempo reale sul mercato dei Buoni del Tesoro Poliennali italiani</p>
+    </div>
+  </div>
+
+  <section id="Mercato">
+    <iframe src="https://tradingeconomics.com/italy/government-bond-yield" title="Andamento dei BTP"></iframe>
+  </section>
+
+  <div class="floating-button">
+    <a href="index.html" class="btn-primary">
+      <i class="fas fa-arrow-left"></i> Torna al Calcolatore
+    </a>
+  </div>
+
+  <style>
+    .page-intro {
+      background-color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 0;
+    }
+    
+    #Mercato {
+      height: calc(100vh - 180px);
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .floating-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+    }
+    
+    .floating-button .btn-primary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</body>
+</html>
