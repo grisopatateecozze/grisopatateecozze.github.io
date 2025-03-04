@@ -12,63 +12,227 @@
   <span>ATTENZIONE GUADAGNO CALCOLATO IN BASE A TASSE E COMMISSIONI DELLA BANCA POPOLARE!!!</span>
 </div>
 
-<!-- Schermata 1: Pagina Iniziale -->
-<section class="screen active" id="home">
-  <h1>Buoni del Tesoro Poliennali</h1>
-  <p>Calcolatore di valore e rendimento</p>
-  <button onclick="goToScreen('menu')">Iniziamo</button>
+
+<h1>Buoni del Tesoro Poliennali</h1>
+<p class="subtitle">Calcolatore di valore e rendimento</p>
+</div>
+
+<div class="card">
+<div class="card-content">
+  <h2>Benvenuto nel nostro Calcolatore BTP</h2>
+  
+  <p>
+    I <strong>Buoni del Tesoro Poliennali (BTP)</strong> sono titoli di Stato emessi dal governo italiano per finanziare il debito pubblico. 
+    Rappresentano una forma di investimento a medio-lungo termine, con scadenze variabili dai 3 ai 50 anni, e garantiscono il pagamento di 
+    cedole periodiche agli investitori.
+    I BTP sono emessi dal <strong>Ministero dell’Economia e delle Finanze (MEF)</strong> tramite aste pubbliche gestite dalla <strong>Banca d’Italia</strong>. 
+    L’obiettivo principale di queste emissioni è raccogliere fondi per sostenere la spesa pubblica, finanziare infrastrutture, servizi e ridurre il deficit dello Stato.
+    I BTP sono titoli a reddito fisso che prevedono il pagamento di interessi sotto forma di <strong>cedole semestrali</strong>. 
+    Il loro rendimento è determinato dal tasso cedolare stabilito al momento dell’emissione e dal prezzo di mercato, che può variare in base alla domanda degli investitori.
+</p>
+  <button class="btn-primary" onclick="goToScreen('menu')">Iniziamo</button>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Schermata 2: Menù -->
 <section class="screen" id="menu">
-  <h1>Cosa vuoi fare?</h1>
-  <button onclick="goToScreen('FaseAcquisto')">Calcola prezzo d'Acquisto</button>
-  <button onclick="goToScreen('FaseVendita')">Calcola guadagno di Vendita</button>
+<div class="content-container">
+<div class="page-header">
+<div class="breadcrumbs">
+  <a href="#" onclick="goToScreen('home')">Home</a> &gt; <span>Menu Calcolatore</span>
+</div>
+<h1>Cosa vuoi fare?</h1>
+<p class="subtitle">Scegli un'opzione per procedere</p>
+</div>
+
+<div class="options-grid">
+<div class="option-card">
+  <div class="icon"><i class="fas fa-calculator"></i></div>
+  <h3>Calcola prezzo d'Acquisto</h3>
+  <p>Determina il costo effettivo dell'investimento in BTP</p>
+  <button class="btn-primary" onclick="goToScreen('FaseAcquisto')">Seleziona</button>
+</div>
+
+<div class="option-card">
+  <div class="icon"><i class="fas fa-chart-line"></i></div>
+  <h3>Calcola guadagno di Vendita</h3>
+  <p>Verifica il rendimento alla vendita dei tuoi BTP</p>
+  <button class="btn-primary" onclick="goToScreen('FaseVendita')">Seleziona</button>
+</div>
+
+<div class="option-card">
+  <div class="icon"><i class="fas fa-chart-bar"></i></div>
+  <h3>Andamento Mercato</h3>
+  <p>Visualizza i dati aggiornati sul mercato dei BTP</p>
+  <a href="mercato.html" class="btn-primary">Seleziona</a>
+</div>
 </section>
 
 <!-- Schermata 3: FaseAcquisto -->
 <section class="screen" id="FaseAcquisto">
-  <h2>Fase d'Acquisto</h2>
-  <label for="valoreNominale">Valore nominale comprato</label>
-  <input type="number" id="valoreNominale" placeholder="Inserisci il valore nominale">
+<div class="content-container">
+<div class="page-header">
+<div class="breadcrumbs">
+  <a href="#" onclick="goToScreen('home')">Home</a> &gt; 
+  <a href="#" onclick="goToScreen('menu')">Menu</a> &gt; 
+  <span>Calcolo Acquisto</span>
+</div>
+<h1>Fase d'Acquisto</h1>
+<p class="subtitle">Calcola il costo effettivo dei tuoi BTP</p>
+</div>
 
-  <label for="prezzoVA">Prezzo/valore attuale di mercato</label>
-  <input type="number" id="prezzoVA" placeholder="Inserisci il prezzo di mercato">
+<div class="card">
+<div class="card-content">
+  <form class="form-container">
+    <div class="form-group">
+      <label for="valoreNominale">Valore nominale comprato</label>
+      <div class="input-container">
+        <input type="number" id="valoreNominale" placeholder="Inserisci il valore nominale">
+        <span class="currency-symbol">€</span>
+      </div>
+    </div>
 
-  <label for="rateoLordo">Rateo Lordo</label>
-  <input type="number" id="rateoLordo" placeholder="Inserisci il rateo lordo">
+    <div class="form-group">
+      <label for="prezzoVA">Prezzo/valore attuale di mercato</label>
+      <div class="input-container">
+        <input type="number" id="prezzoVA" placeholder="Inserisci il prezzo di mercato">
+        <span class="percentage-symbol">%</span>
+      </div>
+    </div>
 
-  <button onclick="mostraPrezzoAcquisto()">Calcola costo d'acquisto</button>
-  <button onclick="goToScreen('menu')">Torna al menu</button>
-  <div id="risultatoAcquisto"></div>
+    <div class="form-group">
+      <label for="rateoLordo">Rateo Lordo</label>
+      <div class="input-container">
+        <input type="number" id="rateoLordo" placeholder="Inserisci il rateo lordo">
+        <span class="percentage-symbol">%</span>
+      </div>
+    </div>
+
+    <button type="button" class="btn-primary" onclick="mostraPrezzoAcquisto()">Calcola costo d'acquisto</button>
+    <button type="button" class="btn-secondary" onclick="goToScreen('menu')">Torna al menu</button>
+  </form>
+  
+  <div id="risultatoAcquisto" class="risultato"></div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Schermata 4: Fase Vendita -->
 <section class="screen" id="FaseVendita">
-  <h2>Fase Vendita Titolo</h2>
-  <label for="prezzoAcquisto">Prezzo d'Acquisto</label>
-  <input type="number" id="prezzoAcquisto" placeholder="Inserisci il prezzo d'acquisto">
+<div class="content-container">
+<div class="page-header">
+<div class="breadcrumbs">
+  <a href="#" onclick="goToScreen('home')">Home</a> &gt; 
+  <a href="#" onclick="goToScreen('menu')">Menu</a> &gt; 
+  <span>Calcolo Vendita</span>
+</div>
+<h1>Fase Vendita Titolo</h1>
+<p class="subtitle">Calcola il guadagno dalla vendita dei tuoi BTP</p>
+</div>
 
-  <label for="valoreNominale1">Valore nominale comprato</label>
-  <input type="number" id="valoreNominale1" placeholder="Inserisci il valore nominale">
+<div class="card">
+<div class="card-content">
+  <form class="form-container">
+    <div class="form-group">
+      <label for="prezzoAcquisto">Prezzo d'Acquisto</label>
+      <div class="input-container">
+        <input type="number" id="prezzoAcquisto" placeholder="Inserisci il prezzo d'acquisto">
+        <span class="currency-symbol">€</span>
+      </div>
+    </div>
 
-  <label for="prezzoVA1">Prezzo/valore attuale di mercato</label>
-  <input type="number" id="prezzoVA1" placeholder="Inserisci il prezzo di mercato">
+    <div class="form-group">
+      <label for="valoreNominale1">Valore nominale comprato</label>
+      <div class="input-container">
+        <input type="number" id="valoreNominale1" placeholder="Inserisci il valore nominale">
+        <span class="currency-symbol">€</span>
+      </div>
+    </div>
 
-  <label for="rateoLordo1">Rateo Lordo</label>
-  <input type="number" id="rateoLordo1" placeholder="Inserisci il rateo lordo">
+    <div class="form-group">
+      <label for="prezzoVA1">Prezzo/valore attuale di mercato</label>
+      <div class="input-container">
+        <input type="number" id="prezzoVA1" placeholder="Inserisci il prezzo di mercato">
+        <span class="percentage-symbol">%</span>
+      </div>
+    </div>
 
-  <button onclick="mostraGuadagno()">Calcola guadagno di vendita</button>
-  <button onclick="goToScreen('menu')">Torna al menu</button>
-  <div id="risultatoGuadagno"></div>
+    <div class="form-group">
+      <label for="rateoLordo1">Rateo Lordo</label>
+      <div class="input-container">
+        <input type="number" id="rateoLordo1" placeholder="Inserisci il rateo lordo">
+        <span class="percentage-symbol">%</span>
+      </div>
+    </div>
+
+    <button type="button" class="btn-primary" onclick="mostraGuadagno()">Calcola guadagno di vendita</button>
+    <button type="button" class="btn-secondary" onclick="goToScreen('menu')">Torna al menu</button>
+  </form>
+  
+  <div id="risultatoGuadagno" class="risultato"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<div class="card">
+  <div class="card-content">
+  <p>
+    Caratteristiche principali:
+      <li><strong>Scadenza</strong>: variabile tra 3, 5, 7, 10, 15, 20, 30 e 50 anni.</li>
+      <li><strong>Cedole fisse</strong>: pagate ogni sei mesi.</li>
+      <li><strong>Prezzo di mercato</strong>: può oscillare rispetto al valore nominale in base all’andamento dei tassi di interesse e alla percezione del rischio-Paese.</li>
+      </p>
+
+  <p>
+    Perché investire in BTP?
+    I BTP rappresentano un’opzione di investimento interessante per diversi motivi.
+      <li><strong>Sicurezza</strong>: essendo garantiti dallo Stato italiano, hanno un rischio di insolvenza relativamente basso rispetto ad altri strumenti finanziari.</li>
+      <li><strong>Rendimento prevedibile</strong>: grazie alle cedole fisse, l’investitore ha un’idea chiara dei flussi di cassa futuri.</li>
+      <li><strong>Diversificazione del portafoglio</strong>: permettono di bilanciare investimenti più rischiosi con strumenti più stabili.</li>
+  </p>
+  
+  <p>
+    Quali sono i rischi?
+    Nonostante la sicurezza relativa, i BTP presentano alcuni rischi:
+      <li><strong>Rischio di tasso d’interesse</strong>: se i tassi di mercato aumentano, il prezzo dei BTP già in circolazione scende.</li>
+      <li><strong>Rischio di inflazione</strong>: se l’inflazione aumenta, il valore reale delle cedole si riduce.</li>
+      <li><strong>Rischio sovrano</strong>: un aumento del rischio-Paese può portare a un deprezzamento dei titoli sul mercato.</li>
+  </p>
+  </div>
+</div>
+</div>
 </section>
 
-<!-- Schermata 5: Mercato -->
-<section class="screen" id="Mercato">
-  <h3>Andamento mercato BTP</h3>
-  <iframe src="https://tradingeconomics.com/italy/government-bond-yield" title="Andamento dei BTP"></iframe>
-  <span>Powered by tradingeconomics.com</span>
-</section>
+<footer class="site-footer">
+<div class="footer-container">
+<div class="footer-section">
+<h4>Calcolatore BTP</h4>
+<p>Strumento per calcolare il valore e il rendimento dei Buoni del Tesoro Poliennali.</p>
+</div>
+<div class="footer-section">
+<h4>Link utili</h4>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Servizi</a></li>
+<li><a href="#">FAQ</a></li>
+<li><a href="#">Contatti</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Contatti</h4>
+<p>Email: griso01@icloud.com</p>
+<p>Telefono: +39 3792884917</p>
+</div>
+</div>
+<div class="copyright">
+<p>&copy; 2025 Calcolatore BTP. Tutti i diritti riservati.</p>
+</div>
+</footer>
 
 <script src="src/app.js"></script>
 </body>
