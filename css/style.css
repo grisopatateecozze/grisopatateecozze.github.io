@@ -365,7 +365,7 @@ iframe {
   overflow: hidden;
   z-index: 1000; /* Assicura che sia visibile sopra tutto */
   white-space: nowrap;
-  border-bottom: 2px solid white; /* Linea di separazione sotto */
+  border-bottom: 1px solid white; /* Linea di separazione sotto */
   padding: 10px 0; /* Spaziatura verticale */
 }
 
@@ -422,3 +422,7 @@ iframe {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+h5 {
+  margin-top: 50px; /* Spazio per evitare che il titolo venga coperto */
+  text-align: center;
+}
