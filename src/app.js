@@ -29,7 +29,11 @@ function calcolaPrezzoAcquisto(valoreNominale, prezzoVA, rateoLordo) {
   const prezzoAcquisto = controvalore + controvaloreInteressi + commissioniVendita + speseBancarie - impostaSostitutivaRateo;
 
   return {
-    "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`
+    "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`,
+    "Controvalore in euro dei titoli": `${controvalore.toFixed(2)}€`,
+    "Controvalore in euro degli interessi": `${controvaloreInteressi.toFixed(2)}€`,
+    "Imposta sostitutiva rateo interessi": `${impostaSostitutivaRateo.toFixed(2)}€`,
+    "Commissione (0,10% sul controvalore)": `${commissioniVendita.toFixed(2)}€`,
   };
 }
 
@@ -62,7 +66,7 @@ function mostraPrezzoAcquisto() {
 
   // Inserisce i risultati nell'area dedicata
   const risultatoDiv = document.getElementById("risultatoAcquisto");
-  risultatoDiv.innerHTML = `<p>${Object.keys(risultato)[0]}: ${Object.values(risultato)[0]}</p>`;
+  risultatoDiv.innerHTML = Object.entries(risultato).map(([key, value]) => `<p>${key}: ${value}</p>`).join('');
 }
 
 function mostraGuadagno() {
