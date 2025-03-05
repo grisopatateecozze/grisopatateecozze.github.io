@@ -24,7 +24,7 @@ body {
   top: 0;
   z-index: 100;
   padding: 10px 20px;
-  max-height: 60px; /* Garantiamo abbastanza spazio per il logo */
+  min-height: 90px; /* Garantiamo abbastanza spazio per il logo */
 }
 
 .header-container {
@@ -39,16 +39,17 @@ body {
 
 /* Logo */
 .logo {
-  top: 30px; 
-  left: 30px;
-  max-height: 100%; /* Fa sì che l'immagine del logo non superi l'altezza dell'header */
-  width: auto; /* Mantiene le proporzioni dell'immagine */
-  height: 100%; /* Rende il logo grande quanto l'header */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* Fa in modo che il logo occupi tutta l'altezza dell'header */
 }
 
 .logo img {
-  top: 30px; 
-  left: 30px;
   max-height: 100%; /* Fa sì che l'immagine del logo non superi l'altezza dell'header */
   width: auto; /* Mantiene le proporzioni dell'immagine */
   height: 100%; /* Rende il logo grande quanto l'header */
@@ -57,6 +58,7 @@ body {
 /* Menu Desktop */
 .main-nav {
   display: flex;
+  align-items: center;
 }
 
 .main-nav ul {
@@ -100,14 +102,13 @@ body {
   }
 
   .logo {
-    top: 30px; 
-    left: 30px;
+    position: relative; /* Cambia la posizione del logo per il mobile */
+    height: auto; /* Non occuperà più tutta l'altezza */
   }
 
   .logo img {
-    top: 30px; 
-    left: 30px;
-    max-height: 60px; /* Impostiamo una dimensione massima per il logo su mobile */
+    max-height: 70px; /* Impostiamo una dimensione massima per il logo su mobile */
+    height: auto;
   }
 
   .main-nav {
