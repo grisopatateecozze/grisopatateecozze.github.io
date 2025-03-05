@@ -24,7 +24,7 @@ body {
   top: 0;
   z-index: 100;
   padding: 10px 20px;
-  min-height: 60px; /* Garantiamo abbastanza spazio per il logo */
+  max-height: 60px; /* Garantiamo abbastanza spazio per il logo */
 }
 
 .header-container {
@@ -107,7 +107,7 @@ body {
   }
 
   .logo img {
-    max-height: 70px; /* Impostiamo una dimensione massima per il logo su mobile */
+    max-height: 60px; /* Impostiamo una dimensione massima per il logo su mobile */
     height: auto;
   }
 
