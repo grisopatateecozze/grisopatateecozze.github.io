@@ -24,7 +24,7 @@ body {
   top: 0;
   z-index: 100;
   padding: 10px 20px;
-  min-height: 100px; /* Garantiamo abbastanza spazio per il logo */
+  min-height: 90px; /* Garantiamo abbastanza spazio per il logo */
 }
 
 .header-container {
@@ -40,7 +40,7 @@ body {
   position: fixed;
   top: 30px; /* Sposta il bottone in alto */
   left: 30px; /* Impedisce che il logo venga ridotto */
-
+  margin-bottom: 5px;
 }
 
 .logo img {
@@ -49,6 +49,7 @@ body {
   position: fixed;
   top: 30px; /* Sposta il bottone in alto */
   left: 30px;
+  margin-bottom: 5px;
 }
 
 /* Menu Desktop */
@@ -102,6 +103,7 @@ body {
     position: fixed;
     top: 30px; /* Sposta il bottone in alto */
     left: 30px; /* Consente al logo di occupare lo spazio necessario */
+    margin-bottom: 5px;
   }
 
   .logo img {
@@ -109,6 +111,7 @@ body {
     position: fixed;
     top: 30px; /* Sposta il bottone in alto */
     left: 30px; /* Altezza massima per il logo */
+    margin-bottom: 5px;
   }
 
   .main-nav {
