@@ -24,7 +24,7 @@ body {
   top: 0;
   z-index: 100;
   padding: 10px 20px;
-  min-height: 90px; /* Garantiamo abbastanza spazio per il logo */
+  min-height: 60px; /* Garantiamo abbastanza spazio per il logo */
 }
 
 .header-container {
