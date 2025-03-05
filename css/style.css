@@ -39,17 +39,16 @@ body {
 
 /* Logo */
 .logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%; /* Fa in modo che il logo occupi tutta l'altezza dell'header */
+  top: 30px; 
+  left: 30px;
+  max-height: 100%; /* Fa sì che l'immagine del logo non superi l'altezza dell'header */
+  width: auto; /* Mantiene le proporzioni dell'immagine */
+  height: 100%; /* Rende il logo grande quanto l'header */
 }
 
 .logo img {
+  top: 30px; 
+  left: 30px;
   max-height: 100%; /* Fa sì che l'immagine del logo non superi l'altezza dell'header */
   width: auto; /* Mantiene le proporzioni dell'immagine */
   height: 100%; /* Rende il logo grande quanto l'header */
@@ -58,7 +57,6 @@ body {
 /* Menu Desktop */
 .main-nav {
   display: flex;
-  align-items: center;
 }
 
 .main-nav ul {
