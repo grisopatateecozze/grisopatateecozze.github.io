@@ -87,7 +87,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Ritorniamo alla riga orizzontale */
+    flex-direction: column; /* Ritorniamo alla riga orizzontale */
     justify-content: space-between;
     padding: 15px;
   }
@@ -98,7 +98,7 @@ body {
   }
 
   .logo img {
-    max-height: 60px; /* Limitiamo l'altezza del logo */
+    max-height: 50px; /* Limitiamo l'altezza del logo */
   }
 
   .main-nav {
