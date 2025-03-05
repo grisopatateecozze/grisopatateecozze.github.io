@@ -33,6 +33,7 @@ function calcolaPrezzoAcquisto(valoreNominale, prezzoVA, rateoLordo) {
     "Controvalore in euro dei titoli": `${controvalore.toFixed(2)}€`,
     "Controvalore in euro degli interessi": `${controvaloreInteressi.toFixed(2)}€`,
     "Imposta sostitutiva rateo interessi": `${impostaSostitutivaRateo.toFixed(2)}€`,
+    "Spese bancarie": `${speseBancarie.toFixed(2)}€`,
     "Commissione (0,10% sul controvalore)": `${commissioniVendita.toFixed(2)}€`,
   };
 }
@@ -82,4 +83,23 @@ function mostraGuadagno() {
   risultatoDiv.innerHTML = Object.entries(risultato).map(([key, value]) => `<p>${key}: ${value}</p>`).join('');
 }
 
+function reset() {
+  document.querySelectorAll('input').forEach(input => {
+    input.value = '';
+  });
+
+  document.querySelectorAll('.risultato').forEach(risultato => {
+    risultato.innerHTML = '';
+  });
+} 
+
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("focus", function() {
+      this.dataset.placeholder = this.placeholder; // Salva il placeholder
+      this.placeholder = "";
+  });
+  input.addEventListener("blur", function() {
+      this.placeholder = this.dataset.placeholder; // Ripristina il placeholder
+  });
+});
 
