@@ -5,7 +5,13 @@ function goToScreen(screenId) {
   });
 
   // Mostra solo la sezione con l'ID specificato
-  document.getElementById(screenId).classList.add('active');
+  const targetSection = document.getElementById(screenId);
+  if (targetSection) {
+    targetSection.classList.add('active');
+
+    // Effettua lo scroll fluido alla sezione
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 function calcoloCommissioni(controvalore) {
