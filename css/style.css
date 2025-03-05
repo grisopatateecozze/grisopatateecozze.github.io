@@ -32,8 +32,8 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; /* Spazio tra logo e menu */
-  align-items: center; /* Allinea verticalmente il contenuto */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -48,7 +48,7 @@ body {
 /* Menu Desktop */
 .main-nav {
   display: flex;
-  align-items: center; /* Centra verticalmente gli item del menu */
+  align-items: center;
 }
 
 .main-nav ul {
@@ -87,36 +87,44 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Impostiamo in orizzontale per mobile */
-    justify-content: space-between; /* Logo a sinistra, menu a destra */
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .logo {
-    flex-grow: 1; /* Espande il logo a sinistra */
+    flex-grow: 1;
   }
 
   .main-nav {
     display: flex;
-    align-items: center; /* Allinea verticalmente gli elementi */
+    align-items: center;
   }
 
   .menu-toggle {
     display: block;
     color: #333;
-    margin-left: auto; /* Allinea l'icona del menu a destra */
+    margin-left: auto;
   }
 
   .main-nav ul {
-    display: block;
+    display: none;
+    flex-direction: column;
     padding: 20px 0;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 75px; /* Posiziona il menu sotto la barra */
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .main-nav ul li {
     margin: 10px 0;
+    text-align: center;
   }
 
   /* Mostra il menu quando è attivo */
-  .main-nav.active {
+  .main-nav.active ul {
     display: block;
   }
 }
