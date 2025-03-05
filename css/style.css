@@ -23,26 +23,25 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 5px 0;
-  min-height: 80px; /* Altezza minima per garantire che il logo non esca */
+  padding: 10px 20px;
+  min-height: 80px; /* Garantiamo abbastanza spazio per il logo */
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  margin: 0;
-  padding: 0;
+  flex-shrink: 0; /* Impedisce che il logo venga ridotto */
 }
 
 .logo img {
-  max-height: 60px; /* Impostiamo un'altezza massima per evitare che il logo sia troppo grande */
+  max-height: 60px; /* Impostiamo un limite massimo per l'altezza del logo */
+  height: auto;
 }
 
 /* Menu Desktop */
@@ -87,24 +86,22 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column; /* Ritorniamo alla riga orizzontale */
+    flex-direction: row; /* Allineamento orizzontale per logo e menu */
     justify-content: space-between;
-    padding: 15px;
   }
   
   .logo {
-    flex: 1;
-    text-align: left; /* Allineamento a sinistra */
+    flex: 1 0 auto; /* Consente al logo di occupare lo spazio necessario */
   }
 
   .logo img {
-    max-height: 50px; /* Limitiamo l'altezza del logo */
+    max-height: 60px; /* Altezza massima per il logo */
   }
 
   .main-nav {
     display: none; /* Nasconde il menu */
     position: absolute;
-    top: 75px; /* Sotto l'header */
+    top: 75px; /* Posiziona il menu sotto l'header */
     right: 0;
     width: 100%;
     background-color: #fff;
@@ -124,7 +121,7 @@ body {
   .menu-toggle {
     display: block;
     color: #333;
-    margin-left: auto;
+    margin-left: auto; /* Spinge il bottone del menu a destra */
   }
 
   /* Mostra il menu quando è attivo */
