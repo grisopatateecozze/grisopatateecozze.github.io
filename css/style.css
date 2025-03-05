@@ -104,14 +104,12 @@ body {
   .logo {
     top: 30px; 
     left: 30px;
-    height: auto; /* Non occuperà più tutta l'altezza */
   }
 
   .logo img {
     top: 30px; 
     left: 30px;
     max-height: 60px; /* Impostiamo una dimensione massima per il logo su mobile */
-    height: auto;
   }
 
   .main-nav {
