@@ -37,12 +37,17 @@ body {
 
 .logo {
   flex-shrink: 0;
-  margin-right: auto;
+  position: fixed;
+  top: 30px; /* Sposta il bottone in alto */
+  left: 30px; /* Impedisce che il logo venga ridotto */
 }
 
 .logo img {
   max-height: 60px; /* Impostiamo un limite massimo per l'altezza del logo */
   height: auto;
+  position: fixed;
+  top: 30px; /* Sposta il bottone in alto */
+  left: 30px;
 }
 
 /* Menu Desktop */
@@ -93,11 +98,16 @@ body {
   
   .logo {
     flex: 1 0 auto;
-    margin-right: auto;
+    position: fixed;
+    top: 30px; /* Sposta il bottone in alto */
+    left: 30px; /* Consente al logo di occupare lo spazio necessario */
   }
 
   .logo img {
-    max-height: 60px; /* Altezza massima per il logo */
+    max-height: 60px;
+    position: fixed;
+    top: 30px; /* Sposta il bottone in alto */
+    left: 30px; /* Altezza massima per il logo */
   }
 
   .main-nav {
