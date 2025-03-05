@@ -303,7 +303,7 @@ input[type="number"]:focus {
   z-index: 1000; /* Assicura che sia visibile sopra tutto */
   white-space: nowrap;
   border-bottom: 1px solid white; /* Linea di separazione sotto */
-  padding: 10px 0; /* Spaziatura verticale */
+  padding: 16px 0; /* Spaziatura verticale */
 }
 
 .scrolling-bar span {
