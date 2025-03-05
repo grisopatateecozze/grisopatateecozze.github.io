@@ -36,23 +36,25 @@ body {
   justify-content: space-between; /* Spazio tra logo e menu */
 }
 
-/* Logo */
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
 .logo img {
   height: 69px;
 }
 
-/* Menu Mobile */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
+/* Logo a sinistra */
+.site-header .header-container .logo {
+  flex: 1; /* Spinge il logo verso sinistra */
 }
 
-/* Navigazione principale */
+/* Menu Desktop */
 .main-nav {
-  margin-left: auto;
+  margin-left: auto; /* Per spingere il menu a destra */
+  display: flex; /* Impostiamo il menu come flexbox */
+  align-items: center; /* Centriamo l'icona e gli elementi del menu */
 }
 
 .main-nav ul {
@@ -79,18 +81,31 @@ body {
   color: #A100FF;
 }
 
+/* Menu Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Mantiene la disposizione orizzontale */
+    flex-direction: row; /* Impostiamo i contenuti in riga */
+    justify-content: space-between; /* Logo a sinistra e icona a destra */
     padding: 15px;
   }
+  
+  .logo {
+    flex: 1;
+  }
 
-  /* Nascondi il menu principale su mobile */
   .main-nav {
-    display: none;
+    display: none; /* Nasconde il menu */
     position: absolute;
-    top: 75px;
+    top: 75px; /* Sotto l'header */
     right: 0;
     width: 100%;
     background-color: #fff;
@@ -107,7 +122,6 @@ body {
     margin: 10px 0;
   }
 
-  /* Mostra l'icona del menu (tre linee) */
   .menu-toggle {
     display: block;
     color: #333;
@@ -118,6 +132,7 @@ body {
     display: block;
   }
 }
+
 
 
 /* Main Content */
