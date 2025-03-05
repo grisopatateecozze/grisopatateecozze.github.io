@@ -19,12 +19,12 @@ body {
 /* Header */
 .site-header {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 5px 0;
-  height: 80px;
+  height: 75px;
 }
 
 .header-container {
@@ -32,8 +32,8 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* Spazio tra logo e menu */
 }
 
 .logo {
@@ -45,10 +45,16 @@ body {
   height: 69px;
 }
 
+/* Logo a sinistra */
+.site-header .header-container .logo {
+  flex: 1; /* Spinge il logo verso sinistra */
+}
+
 /* Menu Desktop */
 .main-nav {
-  display: flex;
-  align-items: center;
+  margin-left: auto; /* Per spingere il menu a destra */
+  display: flex; /* Impostiamo il menu come flexbox */
+  align-items: center; /* Centriamo l'icona e gli elementi del menu */
 }
 
 .main-nav ul {
@@ -87,47 +93,47 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 25px;
   }
-
+  
   .logo {
-    flex-grow: 1;
+    flex: 1;
   }
 
   .main-nav {
-    display: flex;
-    align-items: center;
+    display: none; /* Nasconde il menu */
+    position: absolute;
+    top: 75px; /* Sotto l'header */
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .main-nav ul {
+    display: block;
+    padding: 20px 0;
+  }
+
+  .main-nav ul li {
+    margin: 10px 0;
   }
 
   .menu-toggle {
     display: block;
     color: #333;
-    margin-left: auto;
-  }
-
-  .main-nav ul {
-    display: none;
-    flex-direction: column;
-    padding: 20px 0;
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: 75px; /* Posiziona il menu sotto la barra */
-    left: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .main-nav ul li {
-    margin: 10px 0;
-    text-align: center;
   }
 
   /* Mostra il menu quando è attivo */
-  .main-nav.active ul {
+  .main-nav.active {
     display: block;
   }
 }
+
+
 
 /* Main Content */
 .main-content {
