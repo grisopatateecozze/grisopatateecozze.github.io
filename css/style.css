@@ -1,0 +1,397 @@
+/* Stili generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", "Helvetica Neue", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 0 0 40px 0;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin-top: 30px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.option-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.option-card .icon {
+  color: #A100FF;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.option-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.option-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-container {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 30px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #A100FF;
+  outline: none;
+}
+
+.currency-symbol,
+.percentage-symbol {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+/* Buttons */
+.btn-primary, 
+.btn-secondary,
+.btn-terz {
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #A100FF;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #8400d6;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #e4e4e4;
+}
+
+.btn-terz {
+  background-color: red;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn-terz:hover {
+  background-color: red;
+  transform: translateY(-2px);
+}
+
+/* Screen Management */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Results */
+.risultato {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border-left: 4px solid #A100FF;
+}
+
+.risultato p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.risultato p:last-child {
+  font-weight: bold;
+  color: #A100FF;
+  font-size: 18px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Per mettere gli elementi in riga */
+  gap: 15px; /* Distanza tra le icone */
+}
+
+.footer-section ul li {
+  margin: 0;
+}
+
+.footer-section ul li a {
+  font-size: 30px; /* Dimensione delle icone */
+  color: white; /* Colore delle icone */
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #0073e6; /* Colore quando l'icona viene hoverata */
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 20px 20px 0;
+  border-top: 1px solid #444;
+  text-align: center;
+  color: #aaa;
+  font-size: 10px;
+}
+
+/* Mercato Page */
+#Mercato {
+  width: 100%;
+  height: 100vh;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .main-nav ul {
+    margin-top: 15px;
+  }
+  
+  .main-nav ul li {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 28px;
+  }
+  
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+}
+
+/* Stile per la barra scorrevole */
+.scrolling-bar {
+  position: fixed; /* Fissa la barra in alto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000ff; /* Colore blu brillante */
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Carattere sans-serif */
+  font-size: 2em; /* Aumenta la dimensione del testo */
+  font-weight: bold; /* Testo audace */
+  text-align: center;
+  overflow: hidden;
+  z-index: 1000; /* Assicura che sia visibile sopra tutto */
+  white-space: nowrap;
+  border-bottom: 1px solid white; /* Linea di separazione sotto */
+  padding: 10px 0; /* Spaziatura verticale */
+}
+
+.scrolling-bar span {
+  display: inline-block;
+  padding-left: 100%; /* Inizia fuori dallo schermo */
+  animation: scrollText 9s linear infinite; /* Scorre continuamente */
+}
+
+/* Definizione dell'animazione */
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+
+  
+}
+
+.page-intro {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 0;
+}
+
+#Mercato {
+  height: calc(100vh - 180px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.floating-button-down {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.floating-button-up {
+  position: fixed;
+  top: 30px; /* Sposta il bottone in alto */
+  right: 30px; /* Mantiene il bottone a destra */
+  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.floating-button .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+h5 {
+  margin-top: 50px; /* Spazio per evitare che il titolo venga coperto */
+  text-align: center;
+}
