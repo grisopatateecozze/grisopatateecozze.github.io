@@ -19,7 +19,7 @@ body {
 /* Header */
 .site-header {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -32,8 +32,8 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between; /* Spazio tra logo e menu */
+  align-items: center; /* Allinea verticalmente il contenuto */
 }
 
 .logo {
@@ -45,16 +45,10 @@ body {
   height: 69px;
 }
 
-/* Logo a sinistra */
-.site-header .header-container .logo {
-  flex: 1; /* Spinge il logo verso sinistra */
-}
-
 /* Menu Desktop */
 .main-nav {
-  margin-left: auto; /* Per spingere il menu a destra */
-  display: flex; /* Impostiamo il menu come flexbox */
-  align-items: center; /* Centriamo l'icona e gli elementi del menu */
+  display: flex;
+  align-items: center; /* Centra verticalmente gli item del menu */
 }
 
 .main-nav ul {
@@ -93,24 +87,23 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Impostiamo i contenuti in riga */
-    justify-content: space-between; /* Logo a sinistra e icona a destra */
-    padding: 15px;
+    flex-direction: row; /* Impostiamo in orizzontale per mobile */
+    justify-content: space-between; /* Logo a sinistra, menu a destra */
   }
-  
+
   .logo {
-    flex: 1;
+    flex-grow: 1; /* Espande il logo a sinistra */
   }
 
   .main-nav {
-    display: none; /* Nasconde il menu */
-    position: absolute;
-    top: 75px; /* Sotto l'header */
-    right: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    align-items: center; /* Allinea verticalmente gli elementi */
+  }
+
+  .menu-toggle {
+    display: block;
+    color: #333;
+    margin-left: auto; /* Allinea l'icona del menu a destra */
   }
 
   .main-nav ul {
@@ -122,18 +115,11 @@ body {
     margin: 10px 0;
   }
 
-  .menu-toggle {
-    display: block;
-    color: #333;
-  }
-
   /* Mostra il menu quando è attivo */
   .main-nav.active {
     display: block;
   }
 }
-
-
 
 /* Main Content */
 .main-content {
