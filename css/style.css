@@ -241,6 +241,7 @@ input[type="number"]:focus {
   background-color: #333;
   color: #fff;
   padding: 40px 0 20px;
+  width: 100%;
 }
 
 .footer-container {
@@ -257,6 +258,7 @@ input[type="number"]:focus {
   padding: 0;
   display: flex; /* Per mettere gli elementi in riga */
   gap: 15px; /* Distanza tra le icone */
+  justify-content: center; /* Centra le icone anche su mobile */
 }
 
 .footer-section ul li {
@@ -273,6 +275,7 @@ input[type="number"]:focus {
   color: #0073e6; /* Colore quando l'icona viene hoverata */
 }
 
+/* Copyright */
 .copyright {
   max-width: 1200px;
   margin: 30px auto 0;
@@ -282,6 +285,22 @@ input[type="number"]:focus {
   color: #aaa;
   font-size: 10px;
 }
+
+/* Assicura che il footer occupi sempre tutta la larghezza */
+@media screen and (max-width: 768px) {
+  .site-footer {
+    width: 100%;
+  }
+
+  .footer-container {
+    padding: 0 15px; /* Riduce i margini per riempire tutto lo schermo */
+  }
+
+  .footer-section ul {
+    flex-wrap: wrap; /* Permette alle icone di andare a capo se serve */
+  }
+}
+
 
 /* Stile per la barra scorrevole */
 .scrolling-bar {
