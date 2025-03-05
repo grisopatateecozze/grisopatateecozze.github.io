@@ -14,17 +14,19 @@
   <header class="site-header">
     <div class="header-container">
       <div class="logo">
-        <a href="index.html"><img src="/logo.jpg" alt="Logo"></a>
+        <img src="logo.jpg" alt="BTP Valore">
       </div>
+      <button class="menu-toggle">☰</button>
       <nav class="main-nav">
         <ul>
           <li><a href="vendita.html">Vendita</a></li>
-          <li><a href="acquisto.html">Acquisto </a></li>
+          <li><a href="acquisto.html">Acquisto</a></li>
           <li><a href="mercato.html">Mercato</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  
 
   <div class="content-container">
     <div class="page-header">
@@ -95,5 +97,17 @@
 </footer>
   
 <script src="src/app.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    menuToggle.addEventListener("click", function() {
+      mainNav.classList.toggle("active");
+    });
+  });
+</script>
+
 </body>
 </html>
