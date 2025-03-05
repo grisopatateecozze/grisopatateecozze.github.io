@@ -36,7 +36,8 @@ body {
 }
 
 .logo {
-  flex-shrink: 0; /* Impedisce che il logo venga ridotto */
+  flex-shrink: 0;
+  margin-right: auto;
 }
 
 .logo img {
@@ -91,7 +92,8 @@ body {
   }
   
   .logo {
-    flex: 1 0 auto; /* Consente al logo di occupare lo spazio necessario */
+    flex: 1 0 auto;
+    margin-right: auto;
   }
 
   .logo img {
