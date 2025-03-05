@@ -87,19 +87,18 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row; /* Ritorniamo alla riga orizzontale */
     justify-content: space-between;
-    padding: 25px;
-    min-height: 100px; /* Estende l'header per accogliere un logo più grande */
+    padding: 15px;
   }
   
   .logo {
     flex: 1;
-    text-align: center; /* Centra il logo */
+    text-align: left; /* Allineamento a sinistra */
   }
 
   .logo img {
-    max-height: 70px; /* Altra altezza massima per il logo, in modo che stia ben dentro l'header */
+    max-height: 60px; /* Limitiamo l'altezza del logo */
   }
 
   .main-nav {
