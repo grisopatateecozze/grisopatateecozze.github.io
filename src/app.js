@@ -38,8 +38,8 @@ function calcolaPrezzoAcquisto(valoreNominale, prezzoVA, rateoLordo) {
     "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`,
     "Controvalore in euro dei titoli": `${controvalore.toFixed(2)}€`,
     "Controvalore in euro degli interessi": `${controvaloreInteressi.toFixed(2)}€`,
-    "Imposta sostitutiva rateo interessi": `${impostaSostitutivaRateo.toFixed(2)}€`,
-    "Spese bancarie": `${speseBancarie.toFixed(2)}€`,
+    "Imposta sostitutiva rateo interessi": `<span style="color:red; font-weight: bold;">${-impostaSostitutivaRateo.toFixed(2)}€</span>`,
+    "Spese bancarie": `<span style="color:red; font-weight: bold;">${-speseBancarie.toFixed(2)}€</span>`,
     "Commissione (0,10% sul controvalore)": `${commissioniVendita.toFixed(2)}€`,
   };
 }
@@ -52,14 +52,16 @@ function calcolaGuadagno(prezzoAcquisto, valoreNominale1, prezzoVA1, rateoLordo1
   const commissioniVendita = calcoloCommissioni(controvalore);
 
   const guadagnoLordo = controvalore + controvaloreInteressi - speseBancarie - impostaSostitutivaRateo - commissioniVendita - prezzoAcquisto;
+  const ricavoLordo = controvalore + controvaloreInteressi - speseBancarie - impostaSostitutivaRateo - commissioniVendita;
 
   return {
     "Prezzo d'acquisto": `${prezzoAcquisto.toFixed(2)}€`,
     "Controvalore in euro dei titoli": `${controvalore.toFixed(2)}€`,
     "Controvalore in euro degli interessi": `${controvaloreInteressi.toFixed(2)}€`,
-    "Imposta sostitutiva rateo interessi": `${(-impostaSostitutivaRateo).toFixed(2)}€`,
-    "Commissione (0,10% sul controvalore)": `${(-commissioniVendita).toFixed(2)}€`,
-    "Spese bancarie": `${(-speseBancarie).toFixed(2)}€`,
+    "Imposta sostitutiva rateo interessi": `<span style="color:red; font-weight: bold;">${(-impostaSostitutivaRateo).toFixed(2)}€</span>`,
+    "Commissione (0,10% sul controvalore)": `<span style="color:red; font-weight: bold;">${(-commissioniVendita).toFixed(2)}€</span>`,
+    "Spese bancarie": `<span style="color:red; font-weight: bold;">${(-speseBancarie).toFixed(2)}€</span>`,
+    "Ricavo lordo": `${ricavoLordo.toFixed(2)}€`,
     "Guadagno lordo": `${guadagnoLordo.toFixed(2)}€`
   };
 }
