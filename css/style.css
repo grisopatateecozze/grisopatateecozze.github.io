@@ -308,7 +308,7 @@ input[type="number"]:focus {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: blue; 
+  background-color: #33A9DC; 
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 2em; /* Aumenta la dimensione del testo */
