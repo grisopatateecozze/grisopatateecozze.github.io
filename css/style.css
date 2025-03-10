@@ -168,13 +168,14 @@ input[type="number"]:focus {
 }
 
 .btn-primary {
-  background-color: black;
+  background-color: #333;
   color: white;
   margin-top: 15;
 }
 
 .btn-primary:hover {
-  background-color: #333;
+  background-color: yellow;
+  color: black;
   transform: translateY(-2px);
 }
 
