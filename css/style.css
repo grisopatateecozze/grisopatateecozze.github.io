@@ -243,6 +243,7 @@ input[type="number"]:focus {
   color: #fff;
   padding: 40px 0 20px;
   width: 100%;
+  font-size: 13px;
 }
 
 .footer-container {
@@ -255,11 +256,11 @@ input[type="number"]:focus {
 }
 
 .footer-section ul {
-  list-style: none;
-  padding: 0;
-  display: flex; /* Per mettere gli elementi in riga */
+  display: flex;
+  justify-content: flex-start; /* Allinea a sinistra */
   gap: 15px; /* Distanza tra le icone */
-  justify-content: center; /* Centra le icone anche su mobile */
+  padding-left: 0;
+  list-style: none;
 }
 
 .footer-section ul li {
@@ -267,13 +268,14 @@ input[type="number"]:focus {
 }
 
 .footer-section ul li a {
-  font-size: 30px; /* Dimensione delle icone */
-  color: white; /* Colore delle icone */
-  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  color: white;
+  transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-  color: #0073e6; /* Colore quando l'icona viene hoverata */
+  color: #33A9DC;
 }
 
 /* Copyright */
