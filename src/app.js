@@ -9,8 +9,14 @@ function goToScreen(screenId) {
   if (targetSection) {
     targetSection.classList.add('active');
 
-    // Effettua lo scroll fluido alla sezione
-    targetSection.scrollIntoView({ behavior: "smooth" });
+    // Effettua lo scroll fluido con un offset per evitare che venga coperta
+    const offset = -100; // Modifica questo valore per aggiustare l'altezza dello scroll
+    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY + offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
   }
 }
 
