@@ -117,3 +117,42 @@ document.querySelectorAll("input").forEach(input => {
   });
 });
 
+async function sendMessage() {
+  const input = document.getElementById('userInput').value;
+  const responseDiv = document.getElementById('response');
+  if (!input) {
+    responseDiv.innerHTML = 'Please enter a message.';
+    return;
+  }
+  responseDiv.innerHTML = 'Loading...';
+  try {
+    const response = await fetch(
+      'https://openrouter.ai/api/v1/chat/completions',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer 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',
+          'HTTP-Referer': 'https://calcolaguadagnobtp.altervista.org/',
+          'X-Title': 'BTP calculator',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'deepseek/deepseek-r1:free',
+          messages: [{ role: 'user', content: input }],
+        }),
+      },
+    );
+    const data = await response.json();
+    console.log(data);
+    const markdownText = data.choices?.[0]?.message?.content || 'No response received.';
+    responseDiv.innerHTML = marked.parse(markdownText);
+  } catch (error) {
+    responseDiv.innerHTML = 'Error: ' + error.message;
+  }
+}
+
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  menu.classList.toggle('open'); // Aggiunge o rimuove la classe 'open' per mostrare/nascondere il menu
+}
+

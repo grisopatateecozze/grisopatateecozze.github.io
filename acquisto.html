@@ -10,47 +10,69 @@
 <body>
 
 <main>
-  <div class="content-container">
-    <div class="page-header">
-      <h1>Fase d'Acquisto</h1>
-      <p class="subtitle">Calcola il costo effettivo dei tuoi BTP</p>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="Logo" />
+      </a>
     </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="acquisto.html">Acquisto</a></li>
+        <li><a href="vendita.html">Vendita</a></li>
+        <li><a href="assistente.html">Assistente A.I.</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+  
+  
 
-    <div class="card">
-      <div class="card-content">
-        <form class="form-container">
-          <div class="form-group">
-            <label for="valoreNominale">Valore nominale comprato</label>
-            <div class="input-container">
-              <input type="number" id="valoreNominale" placeholder="Inserisci il valore nominale">
-              <span class="currency-symbol">€</span>
+    <div class="content-container">
+      <div class="page-header">
+        <h1>Fase d'Acquisto</h1>
+        <p class="subtitle">Calcola il costo effettivo dei tuoi BTP</p>
+      </div>
+  
+      <div class="card">
+        <div class="card-content">
+          <form class="form-container">
+            <div class="form-group">
+              <label for="valoreNominale">Valore nominale comprato</label>
+              <div class="input-container">
+                <input type="number" id="valoreNominale" placeholder="Inserisci il valore nominale">
+                <span class="currency-symbol">€</span>
+              </div>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="prezzoVA">Prezzo/valore attuale di mercato</label>
-            <div class="input-container">
-              <input type="number" id="prezzoVA" placeholder="Inserisci il prezzo di mercato">
-              <span class="percentage-symbol">%</span>
+  
+            <div class="form-group">
+              <label for="prezzoVA">Prezzo/valore attuale di mercato</label>
+              <div class="input-container">
+                <input type="number" id="prezzoVA" placeholder="Inserisci il prezzo di mercato">
+                <span class="percentage-symbol">%</span>
+              </div>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="rateoLordo">Rateo Lordo</label>
-            <div class="input-container">
-              <input type="number" id="rateoLordo" placeholder="Inserisci il rateo lordo">
-              <span class="percentage-symbol">%</span>
+  
+            <div class="form-group">
+              <label for="rateoLordo">Rateo Lordo</label>
+              <div class="input-container">
+                <input type="number" id="rateoLordo" placeholder="Inserisci il rateo lordo">
+                <span class="percentage-symbol">%</span>
+              </div>
             </div>
-          </div>
-
-          <button type="button" class="btn-primary" onclick="mostraPrezzoAcquisto()">Calcola costo d'acquisto</button>
-          <button type="button" class="btn-terz" onclick="reset()">Reset - Nuovo Calcolo</button>
-        </form>
-        
-        <div id="risultatoAcquisto" class="risultato"></div>
+  
+            <button type="button" class="btn-primary" onclick="mostraPrezzoAcquisto()">Calcola costo d'acquisto</button>
+            <button type="button" class="btn-terz" onclick="reset()">Reset - Nuovo Calcolo</button>
+          </form>
+          
+          <div id="risultatoAcquisto" class="risultato"></div>
+        </div>
       </div>
     </div>
-  </div>
 </main>
 
 <footer class="site-footer">

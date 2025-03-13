@@ -174,8 +174,8 @@ input[type="number"]:focus {
 }
 
 .btn-primary:hover {
-  background-color: yellow;
-  color: black;
+  background-color: blue;
+  color: whitesmoke;
   transform: translateY(-2px);
 }
 
@@ -197,7 +197,7 @@ input[type="number"]:focus {
 }
 
 .btn-terz:hover {
-  background-color: red;
+  background-color: orangered;
   transform: translateY(-2px);
 }
 
@@ -233,7 +233,7 @@ input[type="number"]:focus {
 
 .risultato p:last-child {
   font-weight: bold;
-  color: #A100FF;
+  color: bluet;
   font-size: 18px;
 }
 
@@ -241,26 +241,34 @@ input[type="number"]:focus {
 .site-footer {
   background-color: #333;
   color: #fff;
-  padding: 40px 0 20px;
+  padding: 40px 20px 20px;
   width: 100%;
-  font-size: 13px;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px; /* Evita la sovrapposizione tra le sezioni */
 }
 
 .footer-section ul {
   display: flex;
-  justify-content: flex-start; /* Allinea a sinistra */
-  gap: 15px; /* Distanza tra le icone */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
   padding-left: 0;
   list-style: none;
+  margin: 0;
 }
 
 .footer-section ul li {
@@ -269,40 +277,38 @@ input[type="number"]:focus {
 
 .footer-section ul li a {
   display: inline-block;
-  font-size: 25px;
+  font-size: 24px;
   color: white;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #33A9DC;
+  color: blue;
 }
 
 /* Copyright */
 .copyright {
   max-width: 1200px;
   margin: 30px auto 0;
-  padding: 20px 20px 0;
+  padding: 15px 20px 0;
   border-top: 1px solid #444;
   text-align: center;
   color: #aaa;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-/* Assicura che il footer occupi sempre tutta la larghezza */
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .site-footer {
-    width: 100%;
-  }
-
   .footer-container {
-    padding: 0 15px; /* Riduce i margini per riempire tutto lo schermo */
+    flex-direction: column;
+    gap: 20px;
   }
 
   .footer-section ul {
-    flex-wrap: wrap; /* Permette alle icone di andare a capo se serve */
+    justify-content: center; /* Centra le icone sui dispositivi piccoli */
   }
 }
+
 
 
 /* Stile per la barra scorrevole */
@@ -311,7 +317,7 @@ input[type="number"]:focus {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #33A9DC; 
+  background-color: blue; 
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 2em; /* Aumenta la dimensione del testo */
@@ -377,7 +383,7 @@ h5 {
 }
 
 .alert-link {
-  color: #1a73e8;
+  color: blue;
   font-weight: bold;
   text-decoration: none;
   display: inline-flex;
@@ -388,3 +394,95 @@ h5 {
 .alert-link:hover {
   text-decoration: underline;
 }
+
+#response {
+  margin-top: 20px;
+  padding: 10px;
+  min-height: 50px;
+}
+#response h3 {
+  color: #333;
+  font-size: 1.2em;
+}
+#response strong {
+  color: blue;
+}
+#response ul {
+  padding-left: 20px;
+}
+#response li {
+  margin-bottom: 5px;
+}
+
+/* Impostiamo il fondo del header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Spazio tra il logo e il menu */
+  align-items: center; /* Allineamento verticale */
+  background-color: white; /* Colore di sfondo */
+  padding: 10px 20px;
+  color: black;
+}
+
+.logo img {
+  height: 40px; /* Imposta un'altezza per il logo */
+}
+
+/* Stile per il menu */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Menu orizzontale di default */
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  color: blue;
+}
+
+/* Menu mobile: di base nascosto */
+.menu-icon {
+  display: none; /* Nasconde l'icona hamburger su desktop */
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* Media query per dispositivi con schermo piccolo (mobile) */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Nasconde il menu su mobile di default */
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column; /* Menu verticale su mobile */
+  }
+
+  .menu-icon {
+    display: block; /* Mostra l'icona hamburger su mobile */
+  }
+
+  .menu.open {
+    display: block; /* Mostra il menu quando è attivo */
+  }
+}
+
+
+
