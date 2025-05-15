@@ -119,8 +119,6 @@ document.querySelectorAll("input").forEach(input => {
   });
 });
 
-const apiKey = process.env.OPENROUTER_API_KEY;
-
 async function sendMessage() {
   const input = document.getElementById('userInput').value;
   const responseDiv = document.getElementById('response');
@@ -130,6 +128,7 @@ async function sendMessage() {
   }
   responseDiv.innerHTML = 'Loading...';
   try {
+    const apiKey = process.env.OPENROUTER_API_KEY;
     const response = await fetch(
       'https://openrouter.ai/api/v1/chat/completions',
       {
