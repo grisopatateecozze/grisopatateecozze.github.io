@@ -1,0 +1,488 @@
+/* Stili generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 0 0 40px 0;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin-top: 30px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.option-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.option-card .icon {
+  color: blue;
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.option-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.option-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+/* Form Styles */
+.form-container {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 30px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #A100FF;
+  outline: none;
+}
+
+.currency-symbol,
+.percentage-symbol {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+/* Buttons */
+.btn-primary, 
+.btn-secondary,
+.btn-terz {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #333;
+  color: white;
+  margin-top: 15;
+}
+
+.btn-primary:hover {
+  background-color: blue;
+  color: whitesmoke;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  border: 1px solid #ddd;
+  margin-top: 10;
+}
+
+.btn-secondary:hover {
+  background-color: #e4e4e4;
+}
+
+.btn-terz {
+  background-color: red;
+  color: white;
+  margin-top: 15px;
+}
+
+.btn-terz:hover {
+  background-color: orangered;
+  transform: translateY(-2px);
+}
+
+/* Ensure icons have appropriate spacing */
+.btn-primary i, 
+.btn-secondary i, 
+.btn-terz i {
+  margin-right: 8px;
+}
+
+/* Screen Management */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Results */
+.risultato {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border-left: 4px solid #A100FF;
+}
+
+.risultato p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.risultato p:last-child {
+  font-weight: bold;
+  color: bluet;
+  font-size: 18px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px 20px;
+  width: 100%;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px; /* Evita la sovrapposizione tra le sezioni */
+}
+
+.footer-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 0;
+}
+
+.footer-section ul li a {
+  display: inline-block;
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: blue;
+}
+
+/* Copyright */
+.copyright {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 15px 20px 0;
+  border-top: 1px solid #444;
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-section ul {
+    justify-content: center; /* Centra le icone sui dispositivi piccoli */
+  }
+}
+
+
+
+/* Stile per la barra scorrevole */
+.scrolling-bar {
+  position: fixed; /* Fissa la barra in alto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: blue; 
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2em; /* Aumenta la dimensione del testo */
+  font-weight: bold; /* Testo audace */
+  text-align: center;
+  overflow: hidden;
+  z-index: 1000; /* Assicura che sia visibile sopra tutto */
+  white-space: nowrap;
+  border-bottom: 1px solid white; /* Linea di separazione sotto */
+  padding: 15px 0; /* Spaziatura verticale */
+}
+
+.scrolling-bar span {
+  display: inline-block;
+  padding-left: 100%; /* Inizia fuori dallo schermo */
+  animation: scrollText 9s linear infinite; /* Scorre continuamente */
+}
+
+/* Definizione dell'animazione */
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+
+  
+}
+
+.page-intro {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 0;
+}
+
+.floating-button-down {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.floating-button-up {
+  position: fixed;
+  top: 30px; /* Sposta il bottone in alto */
+  right: 30px; /* Mantiene il bottone a destra */
+  z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.floating-button .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+h5 {
+  margin-top: 50px; /* Spazio per evitare che il titolo venga coperto */
+  text-align: center;
+}
+
+.alert-link {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alert-link:hover {
+  text-decoration: underline;
+}
+
+#response {
+  margin-top: 20px;
+  padding: 10px;
+  min-height: 50px;
+}
+#response h3 {
+  color: #333;
+  font-size: 1.2em;
+}
+#response strong {
+  color: black;
+}
+#response ul {
+  padding-left: 20px;
+}
+#response li {
+  margin-bottom: 5px;
+}
+
+/* Impostiamo il fondo del header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Spazio tra il logo e il menu */
+  align-items: center; /* Allineamento verticale */
+  background-color: white; /* Colore di sfondo */
+  padding: 10px 20px;
+  color: black;
+}
+
+.logo img {
+  height: 40px; /* Imposta un'altezza per il logo */
+}
+
+/* Stile per il menu */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Menu orizzontale di default */
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  color: blue;
+}
+
+/* Menu mobile: di base nascosto */
+.menu-icon {
+  display: none; /* Nasconde l'icona hamburger su desktop */
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+/* Media query per dispositivi con schermo piccolo (mobile) */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Nasconde il menu su mobile di default */
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column; /* Menu verticale su mobile */
+  }
+
+  .menu-icon {
+    display: block; /* Mostra l'icona hamburger su mobile */
+  }
+
+  .menu.open {
+    display: block; /* Mostra il menu quando è attivo */
+  }
+}
+
+
+

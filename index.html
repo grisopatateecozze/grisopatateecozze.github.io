@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="scrolling-bar">
+    <span>ATTENZIONE: GUADAGNO CALCOLATO IN BASE A TASSE E COMMISSIONI DELLA BANCA POPOLARE!!!</span>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2>Benvenuto nel nostro Calcolatore BTP</h2>
+      <p>
+        I <strong>Buoni del Tesoro Poliennali (BTP)</strong> sono titoli di Stato emessi dal governo italiano per finanziare il debito pubblico. 
+        Rappresentano una forma di investimento a medio-lungo termine, con scadenze variabili dai 3 ai 50 anni, e garantiscono il pagamento di 
+        cedole periodiche agli investitori.
+        I BTP sono emessi dal <strong>Ministero dell’Economia e delle Finanze (MEF)</strong> tramite aste pubbliche gestite dalla <strong>Banca d’Italia</strong>. 
+        L’obiettivo principale di queste emissioni è raccogliere fondi per sostenere la spesa pubblica, finanziare infrastrutture, servizi e ridurre il deficit dello Stato.
+        I BTP sono titoli a reddito fisso che prevedono il pagamento di interessi sotto forma di <strong>cedole semestrali</strong>. 
+        Il loro rendimento è determinato dal tasso cedolare stabilito al momento dell’emissione e dal prezzo di mercato, che può variare in base alla domanda degli investitori.
+      </p>
+      <button class="btn-primary" onclick="goToScreen('menu')">INIZIAMO!</button>
+    </div>
+  </div>
+
+  <!-- Schermata: Menù -->
+  <section class="screen" id="menu">
+    <div class="content-container">
+      <div class="page-header">
+        <h1>Cosa vuoi fare?</h1>
+        <p class="subtitle">Scegli un'opzione per procedere</p>
+      </div>
+
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="icon"><i class="fas fa-calculator"></i></div>
+          <h3>Calcola prezzo d'Acquisto</h3>
+          <p>Determina il costo dell'investimento in BTP</p>
+          <a href="acquisto.html" class="alert-link">-> CALCOLA!</a>
+        </div>
+
+        <div class="option-card">
+          <div class="icon"><i class="fas fa-calculator"></i></div>
+          <h3>Calcola guadagno Vendita</h3>
+          <p>Verifica il rendimento alla vendita dei tuoi BTP</p>
+          <a href="vendita.html" class="alert-link">-> CALCOLA!</a>
+        </div>
+
+        <div class="option-card">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Andamento Mercato</h3>
+          <p>Visualizza i dati aggiornati sul mercato dei BTP sul sito ufficiale Borsa Italiana</p>
+          <a href="https://www.borsaitaliana.it/borsa/obbligazioni/mot/btp/lista.html?lang=it" class="alert-link"> -> VISUALIZZA TUTTI I TITOLI</a>
+          <a href="https://www.borsaitaliana.it/borsa/obbligazioni/mot/btp/scheda/IT0005441883.html?lang=it" class="alert-link">-> VISUALIZZA "Btp Tf 2,15% Mz72 Eur"</a>
+          <a href="https://www.borsaitaliana.it/borsa/obbligazioni/mot/btp/scheda/IT0005425233.html?lang=it" class="alert-link">-> VISUALIZZA "Btp Tf 1,7% St51 Eur"</a>
+        </div>
+
+        <div class="option-card">
+          <div class="icon"><i class="fas fa-brain"></i></div>
+          <h3>Assistente personale A.I.</h3>
+          <p>Chiedi consigli all'potentissimo e informatissimo consulente finanziario A.I a portata di mano</p>
+          <a href="assistente.html" class="alert-link">-> Aiuto!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="card">
+    <div class="card-content">
+      <p>
+        Caratteristiche principali:
+          <li><strong>Scadenza</strong>: variabile tra 3, 5, 7, 10, 15, 20, 30 e 50 anni.</li>
+          <li><strong>Cedole fisse</strong>: pagate ogni sei mesi.</li>
+          <li><strong>Prezzo di mercato</strong>: può oscillare rispetto al valore nominale in base all’andamento dei tassi di interesse e alla percezione del rischio-Paese.</li>
+        </p>
+    
+      <p>
+        Perché investire in BTP?
+        I BTP rappresentano un’opzione di investimento interessante per diversi motivi.
+          <li><strong>Sicurezza</strong>: essendo garantiti dallo Stato italiano, hanno un rischio di insolvenza relativamente basso rispetto ad altri strumenti finanziari.</li>
+          <li><strong>Rendimento prevedibile</strong>: grazie alle cedole fisse, l’investitore ha un’idea chiara dei flussi di cassa futuri.</li>
+          <li><strong>Diversificazione del portafoglio</strong>: permettono di bilanciare investimenti più rischiosi con strumenti più stabili.</li>
+        </p>
+      
+      <p>
+        Quali sono i rischi?
+        Nonostante la sicurezza relativa, i BTP presentano alcuni rischi:
+          <li><strong>Rischio di tasso d’interesse</strong>: se i tassi di mercato aumentano, il prezzo dei BTP già in circolazione scende.</li>
+          <li><strong>Rischio di inflazione</strong>: se l’inflazione aumenta, il valore reale delle cedole si riduce.</li>
+          <li><strong>Rischio sovrano</strong>: un aumento del rischio-Paese può portare a un deprezzamento dei titoli sul mercato.</li>
+        </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Calcolatore BTP</h4>
+        <p>Strumento per calcolare il valore e il rendimento dei Buoni del Tesoro Poliennali.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Seguimi</h4>
+        <ul>
+            <li><a href="https://github.com/grisopatateecozze" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/grisopatateecozze/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/giuseppe-grisolia-243ab1233/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </div>    
+      <div class="footer-section">
+        <h4>Contatti</h4>
+        <p>Email: griso01@icloud.com</p>
+        <p>Telefono: +39 3792884917</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Calcolatore BTP. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="src/app.js"></script>
+    
+</body>
+</html>
