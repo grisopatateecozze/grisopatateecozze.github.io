@@ -1,3 +1,6 @@
+require('dotenv').config();
+const apiKey = process.env.OPENROUTER_API_KEY;
+
 function goToScreen(screenId) {
   // Nasconde tutte le sezioni
   document.querySelectorAll('.screen').forEach(screen => {
@@ -131,7 +134,7 @@ async function sendMessage() {
       {
         method: 'POST',
         headers: {
-          Authorization: 'Bearer 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',
+          Authorization: `Bearer ${apiKey}`,
           'HTTP-Referer': 'https://grisopatateecozze.github.io/',
           'X-Title': 'BTP calculator',
           'Content-Type': 'application/json',
