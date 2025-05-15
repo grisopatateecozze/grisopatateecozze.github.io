@@ -1,5 +1,4 @@
 require('dotenv').config();
-const apiKey = process.env.OPENROUTER_API_KEY;
 
 function goToScreen(screenId) {
   // Nasconde tutte le sezioni
@@ -119,6 +118,8 @@ document.querySelectorAll("input").forEach(input => {
       this.placeholder = this.dataset.placeholder; // Ripristina il placeholder
   });
 });
+
+const apiKey = process.env.OPENROUTER_API_KEY;
 
 async function sendMessage() {
   const input = document.getElementById('userInput').value;
